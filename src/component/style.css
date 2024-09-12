@@ -1,0 +1,83 @@
+/* *{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* -----------------NavSection CSS---------------------------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
+#navsection a{
+  color: black !important;
+  
+}
+/* ------------------------------EmployeeList CSS------------------------------ */
+.background-container{
+    background: linear-gradient(to right, rgba(218, 227, 247, 0.334), rgba(215, 231, 250, 0.604));
+    padding: 20px;
+  
+}
+.searchField{
+    width: 50%;
+    margin: 20px;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+
+}
+.table th {
+    cursor: pointer;
+    user-select: none;
+}
+
+.table th:hover {
+    background-color: #f8f9fa;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
